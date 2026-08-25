@@ -25,5 +25,10 @@ namespace FestivalCidade
             return 0.00;
         }
 
+        public double CalcularValorFinal()
+        {
+            return CalcularCustoBruto() - CalcularDesconto();
+        }
+
     }
 }
