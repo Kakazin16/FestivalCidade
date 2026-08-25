@@ -16,7 +16,14 @@ namespace FestivalCidade
             return 15.00 + (120.00 * DiasShow);
         }
 
-
+        public double CalcularDesconto()
+        {
+            if (!string.IsNullOrEmpty(Cupom) && Cupom.Equals("ROCK10", StringComparison.OrdinalIgnoreCase))
+            {
+                return CalcularCustoBruto() * 0.10;
+            }
+            return 0.00;
+        }
 
     }
 }
