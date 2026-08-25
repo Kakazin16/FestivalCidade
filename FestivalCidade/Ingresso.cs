@@ -30,5 +30,10 @@ namespace FestivalCidade
             return CalcularCustoBruto() - CalcularDesconto();
         }
 
+        public bool VerificarAcessoVip()
+        {
+            return DiasShow > 2 && PontosFidelidade >= 500;
+        }
+
     }
 }
